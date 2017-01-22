@@ -34,6 +34,7 @@ Display.prototype.bars = function (bars, limit) {
 		el.appendChild(child);
 
 		child = document.createElement('div');
+		child.setAttribute('data-limit', limit);
 		child.setAttribute('class', 'progress-text');
 		child.innerHTML = bars[i] + '/' + limit + ' (' + percentage + '%)';
 		el.appendChild(child);
@@ -47,7 +48,7 @@ Display.prototype.bars = function (bars, limit) {
 Display.prototype.select = function (bars) {
 	var select = document.createElement('select');
 	select.setAttribute('id', 'progress-bar-items');
-	select.setAttribute('class', 'columns large-1 medium-2 small-3');
+	select.setAttribute('class', 'col-xl-1 col-lg-1 col-md-2 col-sm-3');
 
 	var i;
 	for (i = 0; i < bars.length; i++) {

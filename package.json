@@ -2,6 +2,7 @@
   "name": "progressbar",
   "version": "0.0.1",
   "devDependencies": {
+    "bower": "^1.7.7",
     "chai": "^3.5.0",
     "eslint": "^3.13.1",
     "grunt": "^1.0.1",
@@ -9,11 +10,35 @@
     "grunt-contrib-jasmine": "^1.1.0",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-css": "^0.5.4",
     "grunt-eslint": "^19.0.0",
-    "jquery": "^3.1.1",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "jasmine-protractor-matchers": "^1.0.1",
     "jsdom": "^9.9.1",
-    "load-grunt-tasks": "^3.5.2"
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "karma-junit-reporter": "^0.4.1",
+    "load-grunt-tasks": "^3.5.2",
+    "protractor": "^4.0.9",
+    "protractor-browser-logs": "^1.0.344"
+  },
+  "scripts": {
+    "postinstall": "bower-installer",
+    "update-deps": "npm update",
+    "postupdate-deps": "bower update",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 .",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
   }
 }

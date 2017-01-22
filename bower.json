@@ -1,0 +1,23 @@
+{
+  "name": "progressbar",
+  "description": "Progress bars with control",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.0.0"
+  },
+  "install" : {
+    "path" : {
+      "css": "dist/css",
+      "js": "dist/js"
+    },
+    "sources" : {
+      "jquery" : "vendor/jquery/dist/jquery.min.js",
+      "bootstrap" : [
+        "vendor/bootstrap/dist/js/bootstrap.min.js",
+        "vendor/bootstrap/dist/css/bootstrap.min.css"
+      ]
+    }
+  }
+
+}

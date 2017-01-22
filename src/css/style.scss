@@ -16,11 +16,14 @@ $border-grey: 1px solid #ccc;
 }
 #progress-bar-items {
 	margin-right: 0.5em;
+	height: 2.5em;
 }
 .progress-button {
 	color: #000;
 	border: $border-grey;
 	padding: 0.515em 1em;
+	width: 4em;
+	margin-right: 0.24em;
 	@include gradient-vertical(#fff, #ddd);
 }
 .progress-button:hover, .progress-button:active, .progress-button:focus {
@@ -34,6 +37,7 @@ $border-grey: 1px solid #ccc;
 	padding: 0;
 	border: none;
 	background-color:$colour-blue;
+	border-radius: 0;
 }
 .red-bar {
 	background: $colour-red;

@@ -21,11 +21,12 @@ ProgressBar.prototype.getData = function (name) {
 
 ProgressBar.prototype.updateProgress = function () {
 	var progress = this.el.getAttribute('data-percent');
+	this.el.firstChild.style.width = progress + '%';
+	
 	if (progress >= 100) {
 		this.el.firstChild.classList.add('red-bar');
 	} else {
 		this.el.firstChild.classList.remove('red-bar');
 	}
-	this.el.firstChild.style.width = progress + '%';
 }
 
