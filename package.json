@@ -28,7 +28,7 @@
     "protractor-browser-logs": "^1.0.344"
   },
   "scripts": {
-    "postinstall": "bower-installer",
+    "postinstall": "bower install",
 
     "update-deps": "npm update",
     "postupdate-deps": "bower update",
