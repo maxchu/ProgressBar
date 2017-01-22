@@ -38,7 +38,7 @@ module.exports = function(grunt) {
       test: {
         src: ['src/js/progressbar.js', 'src/js/display.js'],
         options: {
-            specs: 'tests/*Spec.js'
+            specs: 'unit-tests/*Spec.js'
         }
       }
     },
