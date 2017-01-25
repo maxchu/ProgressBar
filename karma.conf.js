@@ -9,17 +9,23 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
 
     files: [
-      'dist/js/*.js',
+      'src/js/*.js',
       'unit-tests/*Spec.js'
     ],
 
     exclude: [
     ],
 
-    preprocessors: {
+    preprocessors : {
+      'src/js/*.js': 'coverage'
     },
 
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
+
+    coverageReporter : {
+      type : 'html',
+      dir : 'coverage/'
+    },
 
     port: 9876,
 
@@ -41,6 +47,7 @@ module.exports = function(config) {
     concurrency: Infinity,
 
     plugins: [
+      'karma-coverage',
       'karma-chrome-launcher',
       'karma-firefox-launcher',
       'karma-jasmine',

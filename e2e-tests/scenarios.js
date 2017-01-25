@@ -6,7 +6,7 @@ describe('my app', function() {
 
     beforeEach(function() {
       browser.ignoreSynchronization = true;
-      browser.get('index.html');
+      browser.get('dist/index.html');
       browser.wait(function() {
         return element.all(by.css('.progress-bar')).first().isPresent();
       }, 15000);
